@@ -62,7 +62,7 @@
                   </div>
                   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="card-body">
-                        <form id="questionform" action="point to a submit view" method="post">
+                        <form id="questionform" action="{% url 'onlinecourse:submit' course.id %}" method="post">
                             {% for question in course.question_set.all %}
                             <div class="card mt-1">
                                 <div class="card-header"><h5>{{ question.question}}</h5></div>
